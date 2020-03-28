@@ -1,5 +1,3 @@
-function test(){
-    console.log(12346);
-}
-
-test();
+(function test(num){
+    console.log(num);
+})(66666)
