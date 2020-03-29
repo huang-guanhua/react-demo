@@ -22,5 +22,6 @@ module.exports = {
         //"react"
     ],
     "rules": {
+        "no-irregular-whitespace": 2
     }
 };
