@@ -1,6 +1,7 @@
 module.exports = {
     "env": {
         "browser": true,
+        "node": true,
         "es6": true
     },
     "extends": [
@@ -22,6 +23,9 @@ module.exports = {
         //"react"
     ],
     "rules": {
-        "no-irregular-whitespace": 2
+        "no-irregular-whitespace": 2,
+        "no-multi-spaces": 2,
+        "no-trailing-spaces": 2,
+        "key-spacing": [2, { "beforeColon": false, "afterColon": true }]
     }
 };
