@@ -1,7 +1,9 @@
+import React from 'react';
+import ReactDOM from 'react-dom';
+import PageContainer from './page/index';
 import './test';
-const a = 10;
-const obj = {a: 1, b: 2};
-(function test(num){
-    console.log(num + a);
-    console.log(JSON.stringify(obj));
-})(66666);
+
+ReactDOM.render(
+    <PageContainer />,
+    document.getElementById('root')
+)
