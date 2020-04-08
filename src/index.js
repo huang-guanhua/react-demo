@@ -4,6 +4,8 @@ import PageContainer from './page/index';
 import './test';
 
 ReactDOM.render(
-    <PageContainer />,
+    <React.StrictMode>
+        <PageContainer />
+    </React.StrictMode>,
     document.getElementById('root')
 )
