@@ -18,7 +18,7 @@ module.exports = {
     module: {
         rules: [
             {
-                test: /\.js$/,
+                test: /\.(js||jsx)$/,
                 exclude: /node_module/,
                 loader: 'babel-loader'
             },
@@ -39,7 +39,20 @@ module.exports = {
             },
             {
                 test: /\.(png||jpg||gif)$/,
-                loader: 'file-loader'
+                use: [
+                    {
+                        loader: 'url-loader',
+                        options: {
+                            limit: 10 * 1024,
+                            esModule: false,
+                            name: '[name].[contenthash:10].[ext]',
+                            outputPath: 'images'
+                        }
+                    }
+                    // {
+                    //     loader: 'file-loader'
+                    // }
+                ]
             }
         ]
     },
