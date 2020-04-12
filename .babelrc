@@ -4,14 +4,14 @@
             "@babel/preset-env",
             {
                 "useBuiltIns": "usage", //按需加载兼容
-                "corejs": 3, //核心库
-                "targets": { //兼容浏览器版本
-                    "chrome": "58",
-                    "firefox": "60",
-                    "safari": "10",
-                    "edge": "17",
-                    "ie": "11"
-                }
+                "corejs": 3 //核心库
+                // "targets": { //兼容浏览器版本
+                //     "chrome": "58",
+                //     "firefox": "60",
+                //     "safari": "10",
+                //     "edge": "17",
+                //     "ie": "10"
+                // }
             }
         ],
       "@babel/preset-react"

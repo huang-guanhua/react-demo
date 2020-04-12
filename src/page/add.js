@@ -1,4 +1,5 @@
 import React, {useState, useEffect} from 'react';
+import Rule from './rule';
 import './add.css';
 function AddComponent() {
     const [count, setCount] = useState(0)
@@ -21,6 +22,7 @@ function AddComponent() {
     }, []);
     return (
         <div className="content">
+            <Rule />
             <div onClick={count > 0 ? addAction.bind(null, '-') : null}>-</div>
             <div>{count}</div>
             <div onClick={addAction.bind(null, '+')}>+</div>
