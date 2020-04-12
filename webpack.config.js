@@ -92,5 +92,5 @@ module.exports = {
 
     ],
     stats: 'errors-only',
-    devtool: 'cheap-module-source-map'
+    devtool: isDev ? 'cheap-module-source-map' : 'source-map'
 }
