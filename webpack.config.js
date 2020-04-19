@@ -4,6 +4,9 @@ const ErrorOverlayPlugin = require('error-overlay-webpack-plugin');
 const {CleanWebpackPlugin} = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
+
+const webpack = require('webpack');
 
 const env = process.env.NODE_ENV; //区分development和production
 const isDev = env === "development";
@@ -33,10 +36,22 @@ function CssLoader(){
 }
 module.exports = {
     mode: env,
-    entry: './src/index.js',
+    entry: ['react-hot-loader/patch', './src/index.js'],
     output: {
         filename: 'js/built.js',
         path: path.resolve(__dirname, 'build')
+    },
+    devServer: {
+        //设置开发服务起的目标地址
+        contentBase: path.resolve(__dirname,'build'),
+        //服务器访问地址
+        host: 'localhost',
+        //服务器端口
+        port: 8080,
+        //是否启用服务器压缩
+        compress: true,
+        hot: true
+        //https: true
     },
     module: {
         rules: [
@@ -88,9 +103,21 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: "style/[name].css"
         }),
-        new OptimizeCSSAssetsPlugin()
+        new OptimizeCSSAssetsPlugin(),
+        new webpack.DllReferencePlugin({
+            manifest: path.resolve(__dirname, 'library/mainfest.json')
+        }),
+        new AddAssetHtmlPlugin({
+            filepath: path.resolve(__dirname, 'library/lodash.js')
+        })
 
     ],
+    optimization: {
+        splitChunks: {
+          // include all types of chunks
+          chunks: 'all'
+        }
+    },
     stats: 'errors-only',
     devtool: isDev ? 'cheap-module-source-map' : 'source-map'
 }

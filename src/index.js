@@ -1,11 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
 import PageContainer from './page/index';
+import storeData from './data/store';
 import './test';
 
+const store = createStore(storeData);
+
 ReactDOM.render(
-    <React.StrictMode>
-        <PageContainer />
-    </React.StrictMode>,
-    document.getElementById('root')
-)
+  <Provider store={store}>
+    <PageContainer />
+  </Provider>,
+  document.getElementById('root'),
+);

@@ -4,9 +4,13 @@ module.exports = {
         "node": true,
         "es6": true
     },
+    "parser": "babel-eslint",
+    //"extends": "airbnb",
     "extends": [
         "eslint:recommended",
-        "plugin:react/recommended"
+        "plugin:react/recommended",
+        "plugin:react-redux/recommended",
+        //"airbnb"
     ],
     "globals": {
         "Atomics": "readonly",
@@ -20,9 +24,11 @@ module.exports = {
         "sourceType": "module"
     },
     "plugins": [
-        "react"
+        "react",
+        "react-redux"
     ],
     "rules": {
+        "react-redux/connect-prefer-named-arguments": 2,
         "no-irregular-whitespace": 2,
         "no-multi-spaces": 2,
         "no-trailing-spaces": 2,
