@@ -7,7 +7,7 @@ export default class Test extends React.Component {
     // }
 
     addAction = () => {
-        console.log(this, 'this');
+        //console.log(this, 'this');
         //return `xxxxxxx${this.sum()}`;
     }
     render() {

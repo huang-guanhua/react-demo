@@ -36,7 +36,7 @@ function CssLoader(){
 }
 module.exports = {
     mode: env,
-    entry: ['react-hot-loader/patch', './src/index.js'],
+    entry: './src/index.js',
     output: {
         filename: 'js/built.js',
         path: path.resolve(__dirname, 'build')
@@ -45,13 +45,39 @@ module.exports = {
         //设置开发服务起的目标地址
         contentBase: path.resolve(__dirname,'build'),
         //服务器访问地址
-        host: 'localhost',
+        host: '127.0.0.1',
         //服务器端口
         port: 8080,
-        //是否启用服务器压缩
-        compress: true,
-        hot: true
-        //https: true
+        inline: false,
+        // headers: {
+        //     "Access-Control-Allow-Origin": "*"
+        // },
+        // hotOnly: false,
+        // //是否启用服务器压缩
+        // //compress: true,
+        // //hot: true,
+        // //https: true,
+        proxy: {
+            // "/api": {
+            //     target: "https://www.jianshu.com",
+            //     // 因为使用的是https，会有安全校验，所以设置secure为false
+            //     secure: false,
+            //     // port: 80,
+            //     // ingorePath 默认即为 false, 注释掉也可以
+            //     // ingorePath: false,
+            //     // changeOrigin是关键，如果不加这个就无法跳转请求
+            //     changeOrigin: true,
+            // }
+            '*': {
+                target: 'https://zhiqiu.baidu.com', // 后台服务地址以及端口号
+                changeOrigin: true, //是否跨域
+                //ws: false,
+                //pathRewrite: { '^/api': '/' }
+              }
+        },
+        //sockHost: 'http://127.0.0.1',
+        // sockPort: 8080,
+        //disableHostCheck: true,
     },
     module: {
         rules: [

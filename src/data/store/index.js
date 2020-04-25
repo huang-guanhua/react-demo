@@ -1,8 +1,8 @@
 import { combineReducers } from 'redux';
-import list from '../reducers';
+import * as datalist from '../reducers';
 
 const defalutData = combineReducers({
-  list,
+    ...datalist
 });
 
 export default defalutData;

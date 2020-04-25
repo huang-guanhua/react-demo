@@ -9,7 +9,7 @@ module.exports = {
     "extends": [
         "eslint:recommended",
         "plugin:react/recommended",
-        "plugin:react-redux/recommended",
+        //"plugin:react-redux/recommended",
         //"airbnb"
     ],
     "globals": {
@@ -25,10 +25,11 @@ module.exports = {
     },
     "plugins": [
         "react",
-        "react-redux"
+        //"react-redux"
     ],
     "rules": {
-        "react-redux/connect-prefer-named-arguments": 2,
+        "no-unused-vars": 2,
+        //"react-redux/connect-prefer-named-arguments": 2,
         "no-irregular-whitespace": 2,
         "no-multi-spaces": 2,
         "no-trailing-spaces": 2,

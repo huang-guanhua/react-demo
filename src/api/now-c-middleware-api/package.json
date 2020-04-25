@@ -1,0 +1,62 @@
+{
+  "_args": [
+    [
+      "@tencent/now-c-middleware-api@6.294.0",
+      "D:\\work\\now-activity-2020-anniversary-talent"
+    ]
+  ],
+  "_from": "@tencent/now-c-middleware-api@6.294.0",
+  "_id": "@tencent/now-c-middleware-api@6.294.0",
+  "_inBundle": false,
+  "_integrity": "sha1-Z77kruLE1WIbdpmDZtbnEBMBZCo=",
+  "_location": "/@tencent/now-c-middleware-api",
+  "_phantomChildren": {
+    "@tencent/tx-send": "6.239.0"
+  },
+  "_requested": {
+    "type": "version",
+    "registry": true,
+    "raw": "@tencent/now-c-middleware-api@6.294.0",
+    "name": "@tencent/now-c-middleware-api",
+    "escapedName": "@tencent%2fnow-c-middleware-api",
+    "scope": "@tencent",
+    "rawSpec": "6.294.0",
+    "saveSpec": null,
+    "fetchSpec": "6.294.0"
+  },
+  "_requiredBy": [
+    "/"
+  ],
+  "_resolved": "http://r.tnpm.oa.com/@tencent/now-c-middleware-api/download/@tencent/now-c-middleware-api-6.294.0.tgz",
+  "_spec": "6.294.0",
+  "_where": "D:\\work\\now-activity-2020-anniversary-talent",
+  "author": {
+    "name": "linjianghe"
+  },
+  "dependencies": {
+    "@tencent/db": "^6.283.0",
+    "humps": "^2.0.0"
+  },
+  "description": "now渠道业务中间件api",
+  "gitHead": "1fbe6444ca4eceb9c26671524f5ec204003bee3f",
+  "license": "MIT",
+  "main": "lib/index.js",
+  "maintainers": [
+    {
+      "name": "ivwebteam_at_tencent",
+      "email": "adamhe@tencent.com"
+    }
+  ],
+  "name": "@tencent/now-c-middleware-api",
+  "repository": {
+    "type": "git",
+    "url": "https://git.code.oa.com/ivweb/now-design/tree/master/packages/now-channel/@tencent/now-c-middleware-api"
+  },
+  "scripts": {
+    "build": "webpack && tnpm publish",
+    "dev": "webpack",
+    "prepare": "webpack",
+    "test": "mocha --compilers js:babel-core/register --require ./test/setup.js"
+  },
+  "version": "6.294.0"
+}
