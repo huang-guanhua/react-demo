@@ -16,7 +16,7 @@ export function addTodo(data) {
 export function hidenTodo() {
     return {
         "Call_API": {
-            url: '/platform/api/setting/desktop/web/queryDetail',
+            url: '/info',
             types: [HIDDEN_TODO,HIDDEN_TODO_SUCCESS,HIDDEN_TODO_FAIL],
             type: 'get',
             data: {

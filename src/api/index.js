@@ -29,7 +29,8 @@ export default () => next => action => {
             //const res = Object.assign({}, response, typeData, {storeStatus: storeStatus})
             const data = response.data || {};
             //console.log(data, 'response');
-            if(data.code === 0) {
+            // if(data.code === 0) {
+            if(data) {
                 const res = Object.assign({}, data, typeData);
                 next(res);
             } else {
