@@ -44,7 +44,7 @@ class PageContainer extends React.Component {
         <div className="page">
           <div>init pages</div>
           <div>https://github.com/huang-guanhua/react-demo.git</div>
-          <div>git地址</div>
+          <div>git地址 测试触发钩子</div>
           <Test />
           <Add />
           <div className="img" />
