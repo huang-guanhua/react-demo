@@ -7,7 +7,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const AddAssetHtmlPlugin = require('add-asset-html-webpack-plugin');
 
 const webpack = require('webpack');
-
+//import { Configuration } from 'webpack';
 const env = process.env.NODE_ENV; //区分development和production
 const isDev = env === "development";
 
@@ -34,6 +34,10 @@ function CssLoader(){
         }
     ];
 }
+
+// /**
+//  * @type {Configuration}
+//  */
 module.exports = {
     mode: env,
     entry: './src/index.js',
