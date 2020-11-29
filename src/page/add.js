@@ -36,7 +36,7 @@
 
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
-import _ from '@tencent/now-activity-util';
+// import _ from '@tencent/now-activity-util';
 import './index.less';
 // 创建要加载的图片
 const imgs = (imgFile) => {
@@ -160,7 +160,7 @@ class CanvasBanner extends Component {
     }
     handleRuleClick = (rule) => {
         if (rule && rule.url) {
-            _.openActivityPage(rule.url);
+            // _.openActivityPage(rule.url);
         }
     };
     render() {
